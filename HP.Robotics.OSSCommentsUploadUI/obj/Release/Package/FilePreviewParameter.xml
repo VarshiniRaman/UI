@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="OSS_CU_UI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ramanv\\Documents\\Visual\ Studio\ 2015\\Projects\\HP\.Robotics\.OSSCommentsUpload\\HP\.Robotics\.OSSCommentsUploadUI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\ramanv\\Documents\\Visual\ Studio\ 2015\\Projects\\HP\.Robotics\.OSSCommentsUpload\\HP\.Robotics\.OSSCommentsUploadUI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-HP.Robotics.OSSCommentsUploadUI-20190808113314.mdf;Initial Catalog=aspnet-HP.Robotics.OSSCommentsUploadUI-20190808113314;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ramanv\\Documents\\Visual\ Studio\ 2015\\Projects\\HP\.Robotics\.OSSCommentsUpload\\HP\.Robotics\.OSSCommentsUploadUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="LDAPServer-Web.config Connection String" description="" value="hpi-pro-ods-ed-master.infra.hpicorp.net" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ramanv\\Documents\\Visual\ Studio\ 2015\\Projects\\HP\.Robotics\.OSSCommentsUpload\\HP\.Robotics\.OSSCommentsUploadUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LDAPServer']/@connectionString" />
+  </parameter>
+  <parameter name="OSS_CMU_ConnectionString-Web.config Connection String" description="" value="Data Source=c2w25275.itcs.hpicorp.net;Initial Catalog=OSS_CMU;Max Pool Size=1000;COnnection Timeout=100;Persist Security Info=True;User ID=oss_cmu;Password=oss_cmu1234$$" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ramanv\\Documents\\Visual\ Studio\ 2015\\Projects\\HP\.Robotics\.OSSCommentsUpload\\HP\.Robotics\.OSSCommentsUploadUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OSS_CMU_ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,432 @@
+﻿<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    TOBBIE - OSS Comments Upload
+  </title>
+  <!-- Favicon -->
+  <link href="./Images/TOBBIE.jpg" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./Scripts/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./Scripts/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="./Scripts/plugins/@fortawesome/fontawesome-free/css/v4-shims.min.css" rel="stylesheet" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+  <!-- CSS Files -->
+  <link href="./Content/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <link href="./Content/ui-grid.css" rel="stylesheet" />
+  <link href="./Content/Site.css" rel="stylesheet" />
+</head>
+
+<body ng-app="OSSApp" ng-controller="OSSTable" style="font-family: HP Simplified;" class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="./index.html">
+        <img src="./Images/TOBBIE.jpg" class="navbar-brand-img" alt="...">
+          <b>TOBBIE</b>
+      </a>
+      <!-- User -->
+      <ul class="nav align-items-center d-md-none">
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="ni ni-bell-55"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img alt="Image placeholder" src="./Images/theme/team-1-800x800.jpg
+">
+              </span>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+            <div class="dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Welcome!</h6>
+            </div>
+            <a href="./profile.html" class="dropdown-item">
+              <i class="ni ni-single-02"></i>
+              <span>My profile</span>
+            </a>
+            <a href="./profile.html" class="dropdown-item">
+              <i class="ni ni-settings-gear-65"></i>
+              <span>Settings</span>
+            </a>
+            <a href="./profile.html" class="dropdown-item">
+              <i class="ni ni-calendar-grid-58"></i>
+              <span>Activity</span>
+            </a>
+            <a href="./profile.html" class="dropdown-item">
+              <i class="ni ni-support-16"></i>
+              <span>Support</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#!" class="dropdown-item">
+              <i class="ni ni-user-run"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+                <img src="./Images/brand/blue.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li class="nav-item  class=" active>
+          <a class="nav-link" href="./index.html"> <i class="ni ni-chart-pie-35 text-primary"></i> Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  active " href="./tables.html">
+              <i class="ni ni-bullet-list-67 text-red"></i> Tables
+            </a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./profile.html">
+                    <i class="ni ni-single-02 text-yellow"></i> Users
+                </a>
+            </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <!--<h6 class="navbar-heading text-muted">Documentation</h6>-->
+        <!-- Navigation -->
+        <!--<ul class="navbar-nav mb-md-3">
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
+              <i class="ni ni-spaceship"></i> Getting started
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
+              <i class="ni ni-palette"></i> Foundation
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
+              <i class="ni ni-ui-04"></i> Components
+            </a>
+          </li>
+        </ul>-->
+      </div>
+    </div>
+  </nav>
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./tables.html">Tables</a>
+                <!-- User -->
+                <ul class="navbar-nav align-items-center d-none d-md-flex">
+                    <li class="nav-item dropdown">
+                        <!--<a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                            <a class="nav-link pr-0" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <div class="media align-items-center">
+                                    <span class="avatar avatar-sm rounded-circle" style="background-color:white !important">
+                                        <img alt="Image placeholder" src="./Images/hp-logo-print.png">
+                                    </span>
+                                    <div class="media-body ml-2 d-none d-lg-block">
+                                        <span class="mb-0 text-sm  font-weight-bold">{{userName}}</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome!</h6>
+                                </div>
+                                <a href="./profile.html" class="dropdown-item">
+                                    <i class="ni ni-single-02"></i>
+                                    <span>My profile</span>
+                                </a>
+                                <a href="./profile.html" class="dropdown-item">
+                                    <i class="ni ni-settings-gear-65"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="./profile.html" class="dropdown-item">
+                                    <i class="ni ni-calendar-grid-58"></i>
+                                    <span>Activity</span>
+                                </a>
+                                <a href="./profile.html" class="dropdown-item">
+                                    <i class="ni ni-support-16"></i>
+                                    <span>Support</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="ni ni-user-run"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <!-- Header -->
+        <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <!-- Card stats -->
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body" ng-click="show_oss()">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">OSS Comments</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{commentstotal}}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                                <i class="fas fa-comments"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body" ng-click="show_backlog()">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Backlog</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{backlogtotal}}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                                <i class="fa fa-file-excel-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body" ng-click="show_sharepoint()">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">SharePoint</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{sharepointtotal}}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                                <i class="fa fa-files-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body" ng-click="show_sap()">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">SAP</h5>
+                                            <span class="h2 font-weight-bold mb-0">{{saptotal}}</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                                <i class="fas fa-database"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt--7">
+            <!-- Table -->
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow" ng-if="oss_output">
+                        <div class="card-header border-0">
+                            <h3 class="mb-0">OSS Output</h3>
+                            <h4 style="float: right;margin-top: -30px;">Current Week Number : {{currentWeekNo}}</h4>
+                        </div>
+                        <div class="table-responsive" style="padding: 5px 5px 5px 5px;">
+                            <div ui-grid="outputdetails" ui-grid-edit ui-grid-save-state ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns class="grid"></div>
+                        </div>
+                        <div>
+                        <button type="submit" title="Download" class="btn btn-primary btn-round" ng-click="exportOutputData()" style="margin: 1% 0% 1% 85%;border-radius: 30px;"><i class="fa fa-download exportButton"></i><div class="ripple-container"></div></button>
+                        <button type="submit" title="Upload" class="btn btn-primary btn-round" ng-click="uploadOSSComments()" style="border-radius: 30px;margin:0;"><i class="fa fa-upload exportButton"></i><div class="ripple-container"></div></button>
+                        <button type="submit" title="Bulk Upload" class="btn btn-primary btn-round"  data-toggle="modal" data-target="#UploadBulkComments" style="margin: 0;border-radius: 30px;"><i class="fa fa-cloud-upload exportButton"></i><div class="ripple-container"></div></button>
+                        </div>
+                    </div>
+                    <div class="card shadow" ng-if="backlog">
+                        <div class="card-header border-0">
+                            <h3 class="mb-0">Backlog Input</h3>
+                        </div>
+                        <div class="table-responsive" style="padding: 5px 5px 5px 5px;">
+                            <div ui-grid="backlogdetails" ui-grid-save-state ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns class="grid"></div>
+                        </div>
+                        <div><button type="submit" class="btn btn-primary btn-round" ng-click="exportBacklogData()" style="margin: 1% 0% 1% 85%;border-radius: 30px;"><i class="fa fa-download exportButton"></i><div class="ripple-container"></div></button></div>
+                    </div>
+                    <div class="card shadow" ng-if="sharepoint" style="padding: 5px 5px 5px 5px;">
+                        <div class="card-header border-0">
+                            <h3 class="mb-0">SharePoint Input</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <div ui-grid="sharepointdetails" ui-grid-save-state ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns class="grid"></div>
+                        </div>
+                        <div><button type="submit" class="btn btn-primary btn-round" ng-click="exportSharePointData()" style="margin: 1% 0% 1% 85%;border-radius: 30px;"><i class="fa fa-download exportButton"></i><div class="ripple-container"></div></button></div>
+                    </div>
+                    <div class="card shadow" ng-if="sap" style="padding: 5px 5px 5px 5px;">
+                        <div class="card-header border-0">
+                            <h3 class="mb-0">SAP Input</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <div ui-grid="sapdetails" ui-grid-save-state ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns class="grid"></div>
+                        </div>
+                        <div><button type="submit" class="btn btn-primary btn-round" ng-click="exportSAPData()" style="margin: 1% 0% 1% 85%;border-radius: 30px;"><i class="fa fa-download exportButton"></i><div class="ripple-container"></div></button></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="overlay">
+                <div id="LoadingMsg" style="display:none;background-color: #646fe461;" class="LoadingM card"></div>
+            </div>
+                
+                <div class="modal fade" id="editComments" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Comments for {{datacopy.SAPOrdNo}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                SAPOrdNo : {{datacopy.SAPOrdNo}}<br />
+                                ItemNo : {{datacopy.ItemNo}}<br />
+                                Acked Quantity : {{datacopy.AckedQuantity}}<br />
+                                Commit date : {{datacopy.Commitdate}}<br />
+                                ReAck Reason Category : {{datacopy.ReAckReasonCategory}}<br />
+                                Free Text Comments :
+                                <textarea class="form-control" placeholder="Free Text Comments" ng-model="datacopy.FreeTextComments"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" ng-click="editSubmit(datacopy)">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="modal fade" id="UploadBulkComments" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 60% !important;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Upload Bulk Comments</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div><textarea class="form-control" placeholder="Enter Input Data" ng-model="copieddata" ng-change="oncopy(copieddata)"></textarea></div>
+                            <div ng-if="ShowCopyText" class="grid" ui-grid="copied" ui-grid-selection ui-grid-save-state ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns style="width:100%;clear:both"></div>
+                            <b>Input Columns Order </b> -  SAPOrdNo | ItemNo | AckedQuantity | Commitdate | ReAckReasonCategory | FreeTextComments
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" ng-click="bulkUpload()">Upload Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="row align-items-center justify-content-xl-between">
+                        <div class="col-xl-6">
+                            <div class="copyright text-center text-xl-left text-muted">
+                                HPI SCOAH <a class="font-weight-bold ml-1">Robotics</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                                <li class="nav-item">
+                                    <a href="mailto:varshini.raman@hp.com?Subject=TOBBIE%20UI%20ContactUs" class="nav-link" target="_blank">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+       
+            </div>
+            <!--   Core   -->
+            <script src="./Scripts/plugins/jquery/dist/jquery.min.js"></script>
+            <script src="./Scripts/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <!--   Optional JS   -->
+            <!--   Argon JS   -->
+            <script src="./Scripts/argon-dashboard.min.js?v=1.1.0"></script>
+            <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+            <script src="./Scripts/angular.min.js"></script>
+            <script src="./Scripts/ui-grid.js"></script>
+            <script type="text/javascript" src="./Scripts/alasql.min.js"></script>
+            <script type="text/javascript" src="./Scripts/xlsx.core.min.js"></script>
+            <script src="./Scripts/bootstrap-notify.js"></script>
+            <script src="./Scripts/OSS.js"></script>
+            <script>
+                window.TrackJS &&
+                  TrackJS.install({
+                      token: "ee6fab19c5a04ac1a32a645abde4613a",
+                      application: "argon-dashboard-free"
+                  });
+            </script>
+</body>
+
+</html>
